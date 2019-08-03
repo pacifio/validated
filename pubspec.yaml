@@ -1,0 +1,10 @@
+name: validated
+version: 1.0.0
+authors:
+  - Adib Mohsin <adibmohsin.root@gmail.com>
+description: The ultimate string validator for dart and flutter with over 40+ validators
+homepage: https://github.com/pacifio/validated
+environment:
+  sdk: ">=2.0.0-dev.36.0 <3.0.0"
+dev_dependencies:
+  test: ">=0.12.18"
