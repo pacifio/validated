@@ -1,4 +1,4 @@
-import './isIP.dart';
+import './isIp.dart';
 
 RegExp _subnetMaybe = RegExp(r"/^\d{1,2}$/");
 

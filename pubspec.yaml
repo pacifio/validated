@@ -1,5 +1,5 @@
 name: validated
-version: 1.0.0
+version: 1.0.1
 authors:
   - Adib Mohsin <adibmohsin.root@gmail.com>
 description: The ultimate string validator for dart and flutter with over 40+ validators

@@ -12,7 +12,7 @@ import './isFQDN.dart';
 /// 'host_whitelist': false, 'host_blacklist': false }`.
 bool isURL(String input, [Map options]) {
   if (input == null ||
-      input.length == 0 ||
+      input.isEmpty ||
       input.length > 2083 ||
       input.indexOf('mailto:') == 0) {
     return false;
@@ -29,7 +29,6 @@ bool isURL(String input, [Map options]) {
 
   var protocol,
       user,
-      pass,
       auth,
       host,
       hostname,
@@ -86,7 +85,7 @@ bool isURL(String input, [Map options]) {
       if (!new RegExp(r'^\S+$').hasMatch(user)) {
         return false;
       }
-      pass = auth.join(':');
+      auth.join(':');
       if (!new RegExp(r'^\S*$').hasMatch(user)) {
         return false;
       }

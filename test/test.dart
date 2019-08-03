@@ -5,5 +5,6 @@ void main() {
   test('testing validators', () {
     expect(validate.isBoolean('true'), true);
     expect(validate.isEmail('not@email'), false);
+    expect(validate.isURL("google.com"), true);
   });
 }

@@ -7,7 +7,7 @@ Map _default_normalize_email_options = {'lowercase': true};
 
 /// convert the input to a string
 String toString(input) {
-  if (input == null || (input is List && input.length == 0)) {
+  if (input == null || (input is List && input.isEmpty)) {
     input = '';
   }
   return input.toString();
@@ -37,7 +37,7 @@ double toDouble(String str) {
 }
 
 /// convert the input to an integer, or NAN if the input is not an integer
-num toInt(String str, {int radix: 10}) {
+num toInt(String str, {int radix = 10}) {
   try {
     return int.parse(str, radix: radix);
   } catch (e) {

@@ -1,5 +1,5 @@
 # Validated
- The ultimate dart + flutter string validators . This library over 40 validators plus sanitizers . Check out the [docs](https://pub.dev/documentation/validated/latest/) for all functions . You will find all the functions under ```validated``` package
+ The ultimate dart + flutter string validators . This library over 40 validators plus sanitizers . Check out the [docs](https://pub.dev/documentation/validated/latest/validated/validated-library.html) for all functions . You will find all the functions under ```validated``` package
 
 # Example
 ```dart
@@ -20,11 +20,11 @@ void main() {
 
  # Credits
 1 . [validator.js](https://github.com/validatorjs/validator.js)
-<br/>
+<br>
 2 . [dart-validator](https://github.com/karan/validator.dart)
-<br/>
+<br>
 3 . [email-validator](https://github.com/manishsaraan/email-validator)
-<br/>
+<br>
 
 # Todos
 - [x] Ported validator.js to dart
