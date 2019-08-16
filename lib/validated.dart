@@ -42,3 +42,5 @@ export './src/isAscii.dart';
 export './src/isFQDN.dart';
 export './src/sanitizer.dart';
 export './src/contains.dart';
+export './src/isCPF.dart';
+export './src/isCNPJ.dart';
