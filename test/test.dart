@@ -6,5 +6,6 @@ void main() {
     expect(validate.isBoolean('true'), true);
     expect(validate.isEmail('not@email'), false);
     expect(validate.isURL("google.com"), true);
+    expect(validate.isEmoji("😀"), true);
   });
 }

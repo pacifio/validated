@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the isCurrency function from the validated library, for the Dart programming language.">
-  <title>isCurrency function - validated library - Dart API</title>
+  <meta name="description" content="API docs for the isEmoji function from the validated library, for the Dart programming language.">
+  <title>isEmoji function - validated library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="..">
 
@@ -26,9 +26,9 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="index.html">validated</a></li>
     <li><a href="validated/validated-library.html">validated</a></li>
-    <li class="self-crumb">isCurrency function</li>
+    <li class="self-crumb">isEmoji function</li>
   </ol>
-  <div class="self-name">isCurrency</div>
+  <div class="self-name">isEmoji</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -46,7 +46,7 @@
     <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
       <li><a href="index.html">validated</a></li>
       <li><a href="validated/validated-library.html">validated</a></li>
-      <li class="self-crumb">isCurrency function</li>
+      <li class="self-crumb">isEmoji function</li>
     </ol>
     
     <h5>validated library</h5>
@@ -121,70 +121,23 @@
   </div><!--/.sidebar-offcanvas-left-->
 
   <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
-      <div><h1><span class="kind-function">isCurrency</span> function </h1></div>
+      <div><h1><span class="kind-function">isEmoji</span> function </h1></div>
 
     <section class="multi-line-signature">
         <span class="returntype">bool</span>
-                <span class="name ">isCurrency</span>
-(<wbr><span class="parameter" id="isCurrency-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span>, {</span> <span class="parameter" id="isCurrency-param-symbol"><span class="type-annotation">dynamic</span> <span class="parameter-name">symbol</span>: <span class="default-value">'\$'</span>, </span> <span class="parameter" id="isCurrency-param-require_symbol"><span class="type-annotation">dynamic</span> <span class="parameter-name">require_symbol</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="isCurrency-param-allow_space_after_symbol"><span class="type-annotation">dynamic</span> <span class="parameter-name">allow_space_after_symbol</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="isCurrency-param-symbol_after_digits"><span class="type-annotation">dynamic</span> <span class="parameter-name">symbol_after_digits</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="isCurrency-param-allow_negatives"><span class="type-annotation">dynamic</span> <span class="parameter-name">allow_negatives</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="isCurrency-param-parens_for_negatives"><span class="type-annotation">dynamic</span> <span class="parameter-name">parens_for_negatives</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="isCurrency-param-negative_sign_before_digits"><span class="type-annotation">dynamic</span> <span class="parameter-name">negative_sign_before_digits</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="isCurrency-param-negative_sign_after_digits"><span class="type-annotation">dynamic</span> <span class="parameter-name">negative_sign_after_digits</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="isCurrency-param-allow_negative_sign_placeholder"><span class="type-annotation">dynamic</span> <span class="parameter-name">allow_negative_sign_placeholder</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="isCurrency-param-thousands_separator"><span class="type-annotation">dynamic</span> <span class="parameter-name">thousands_separator</span>: <span class="default-value">','</span>, </span> <span class="parameter" id="isCurrency-param-decimal_separator"><span class="type-annotation">dynamic</span> <span class="parameter-name">decimal_separator</span>: <span class="default-value">'.'</span>, </span> <span class="parameter" id="isCurrency-param-allow_decimal"><span class="type-annotation">dynamic</span> <span class="parameter-name">allow_decimal</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="isCurrency-param-require_decimal"><span class="type-annotation">dynamic</span> <span class="parameter-name">require_decimal</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="isCurrency-param-digits_after_decimal"><span class="type-annotation">dynamic</span> <span class="parameter-name">digits_after_decimal</span>: <span class="default-value">const [2]</span>, </span> <span class="parameter" id="isCurrency-param-allow_space_after_digits"><span class="type-annotation">dynamic</span> <span class="parameter-name">allow_space_after_digits</span>: <span class="default-value">false</span></span> })
+                <span class="name ">isEmoji</span>
+(<wbr><span class="parameter" id="isEmoji-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
     </section>
     <section class="desc markdown">
-      <p>Check if string <code>input</code> is a currency
-optional params
-<code>symbol</code> = "$"
-<code>require_symbol</code> = false
-<code>allow_space_after_symbol</code> = false
-<code>symbol_after_digits</code> = false
-<code>allow_negatives</code> = true
-<code>parens_for_negatives</code> = false
-<code>negative_sign_before_digits</code> = false
-<code>negative_sign_after_digits</code> = fasle
-<code>allow_negative_sign_placeholder</code> = false
-<code>thousands_separator</code> = ','
-<code>decimal_separator</code> = '.'
-<code>allow_decimal</code> = true
-<code>require_decimal</code> = false
-<code>digits_after_decimal</code> = const <code>2</code>
-<code>allow_space_after_digits</code> = false</p>
+      <p>Takes an input (an emoji) for validation</p>
     </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">bool isCurrency(
-  String input, {
-  symbol = &#39;\$&#39;,
-  require_symbol = false,
-  allow_space_after_symbol = false,
-  symbol_after_digits = false,
-  allow_negatives = true,
-  parens_for_negatives = false,
-  negative_sign_before_digits = false,
-  negative_sign_after_digits = false,
-  allow_negative_sign_placeholder = false,
-  thousands_separator = &#39;,&#39;,
-  decimal_separator = &#39;.&#39;,
-  allow_decimal = true,
-  require_decimal = false,
-  digits_after_decimal = const [2],
-  allow_space_after_digits = false,
-}) {
-  return _regexBuild(
-    symbol: symbol,
-    require_symbol: require_symbol,
-    allow_space_after_symbol: allow_space_after_symbol,
-    symbol_after_digits: symbol_after_digits,
-    allow_negatives: allow_negatives,
-    parens_for_negatives: parens_for_negatives,
-    negative_sign_before_digits: negative_sign_before_digits,
-    negative_sign_after_digits: negative_sign_after_digits,
-    allow_negative_sign_placeholder: allow_negative_sign_placeholder,
-    thousands_separator: thousands_separator,
-    decimal_separator: decimal_separator,
-    allow_decimal: allow_decimal,
-    require_decimal: require_decimal,
-    digits_after_decimal: digits_after_decimal,
-    allow_space_after_digits: allow_space_after_digits,
-  ).hasMatch(input);
+      <pre class="language-dart"><code class="language-dart">bool isEmoji(String input) {
+  RegExp regExp = new RegExp(
+      r&quot;(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])&quot;);
+  return regExp.hasMatch(input);
 }</code></pre>
     </section>
 

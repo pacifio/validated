@@ -156,8 +156,8 @@
           check if the string's length (in bytes) falls in a range.
                   
 </dd>
-        <dt id="isCapital" class="callable">
-          <span class="name"><a href="validated/isCapital.html">isCapital</a></span><span class="signature">(<wbr><span class="parameter" id="isCapital-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
+        <dt id="isCapitalized" class="callable">
+          <span class="name"><a href="validated/isCapitalized.html">isCapitalized</a></span><span class="signature">(<wbr><span class="parameter" id="isCapitalized-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
             <span class="returntype parameter">&#8594; bool</span>
           </span>
                   </dt>
@@ -224,6 +224,15 @@ optional params
                   </dt>
         <dd>
           Check if string <code>input</code> is an email
+                  
+</dd>
+        <dt id="isEmoji" class="callable">
+          <span class="name"><a href="validated/isEmoji.html">isEmoji</a></span><span class="signature">(<wbr><span class="parameter" id="isEmoji-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+                  </dt>
+        <dd>
+          Takes an input (an emoji) for validation
                   
 </dd>
         <dt id="isFloat" class="callable">
@@ -643,12 +652,13 @@ pass down <code>chars</code> @required
       <li><a href="validated/isBase64.html">isBase64</a></li>
       <li><a href="validated/isBoolean.html">isBoolean</a></li>
       <li><a href="validated/isByteLength.html">isByteLength</a></li>
-      <li><a href="validated/isCapital.html">isCapital</a></li>
+      <li><a href="validated/isCapitalized.html">isCapitalized</a></li>
       <li><a href="validated/isCreditCard.html">isCreditCard</a></li>
       <li><a href="validated/isCurrency.html">isCurrency</a></li>
       <li><a href="validated/isDataURI.html">isDataURI</a></li>
       <li><a href="validated/isDivisibleBy.html">isDivisibleBy</a></li>
       <li><a href="validated/isEmail.html">isEmail</a></li>
+      <li><a href="validated/isEmoji.html">isEmoji</a></li>
       <li><a href="validated/isFloat.html">isFloat</a></li>
       <li><a href="validated/isFQDN.html">isFQDN</a></li>
       <li><a href="validated/isFullWidth.html">isFullWidth</a></li>
@@ -700,7 +710,7 @@ pass down <code>chars</code> @required
 
 <footer>
   <span class="no-break">
-    validated 1.0.0
+    validated 1.0.2
   </span>
 
   
