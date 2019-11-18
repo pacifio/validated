@@ -45,7 +45,7 @@ validate.toString(input);
 <br>
 3 . [email-validator](https://github.com/manishsaraan/email-validator)
 <br>
-1. [emoji-regex](https://www.regextester.com/106421)
+4. [emoji-regex](https://www.regextester.com/106421)
 
 # Todos
 - [x] Ported validator.js to dart
