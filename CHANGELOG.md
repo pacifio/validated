@@ -1,3 +1,7 @@
+## 1.0.3
+
+* Fixed new keyword issue
+
 ## 1.0.2
 
 * Added isEmoji
