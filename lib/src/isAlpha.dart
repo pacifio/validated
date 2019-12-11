@@ -1,4 +1,4 @@
-RegExp _alpha = new RegExp(r'^[a-zA-Z]+$');
+RegExp _alpha = RegExp(r'^[a-zA-Z]+$');
 
 /// check if the string [input] contains only letters (a-zA-Z).
 bool isAlpha(String input) {

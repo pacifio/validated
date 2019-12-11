@@ -11,7 +11,7 @@ bool isFQDN(input, [options]) {
   List parts = input.split('.');
   if (options['require_tld']) {
     var tld = parts.removeLast();
-    if (parts.length == 0 || !new RegExp(r'^[a-z]{2,}$').hasMatch(tld)) {
+    if (parts.length == 0 || !RegExp(r'^[a-z]{2,}$').hasMatch(tld)) {
       return false;
     }
   }
@@ -23,7 +23,7 @@ bool isFQDN(input, [options]) {
         return false;
       }
     }
-    if (!new RegExp(r'^[a-z\\u00a1-\\uffff0-9-]+$').hasMatch(part)) {
+    if (!RegExp(r'^[a-z\\u00a1-\\uffff0-9-]+$').hasMatch(part)) {
       return false;
     }
     if (part[0] == '-' ||

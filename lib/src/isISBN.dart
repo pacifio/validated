@@ -1,7 +1,7 @@
 // taken from https://github.com/karan/validator.dart/tree/master/lib/src
 
-RegExp _isbn10Maybe = new RegExp(r'^(?:[0-9]{9}X|[0-9]{10})$');
-RegExp _isbn13Maybe = new RegExp(r'^(?:[0-9]{13})$');
+RegExp _isbn10Maybe = RegExp(r'^(?:[0-9]{9}X|[0-9]{10})$');
+RegExp _isbn13Maybe = RegExp(r'^(?:[0-9]{13})$');
 
 /// check if the string [input] is an ISBN (version 10 or 13)
 bool isISBN(String input, [version]) {
@@ -11,7 +11,7 @@ bool isISBN(String input, [version]) {
 
   version = version.toString();
 
-  String sanitized = input.replaceAll(new RegExp(r'[\s-]+'), '');
+  String sanitized = input.replaceAll(RegExp(r'[\s-]+'), '');
   int checksum = 0;
 
   if (version == '10') {

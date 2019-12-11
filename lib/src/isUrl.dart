@@ -55,7 +55,7 @@ bool isURL(String input, [Map options]) {
   split = input.split('#');
   input = shift(split);
   hash = split.join('#');
-  if (hash != null && hash != "" && new RegExp(r'\s').hasMatch(hash)) {
+  if (hash != null && hash != "" && RegExp(r'\s').hasMatch(hash)) {
     return false;
   }
 
@@ -63,7 +63,7 @@ bool isURL(String input, [Map options]) {
   split = input.split('?');
   input = shift(split);
   query = split.join('?');
-  if (query != null && query != "" && new RegExp(r'\s').hasMatch(query)) {
+  if (query != null && query != "" && RegExp(r'\s').hasMatch(query)) {
     return false;
   }
 
@@ -71,7 +71,7 @@ bool isURL(String input, [Map options]) {
   split = input.split('/');
   input = shift(split);
   path = split.join('/');
-  if (path != null && path != "" && new RegExp(r'\s').hasMatch(path)) {
+  if (path != null && path != "" && RegExp(r'\s').hasMatch(path)) {
     return false;
   }
 
@@ -82,11 +82,11 @@ bool isURL(String input, [Map options]) {
     if (auth.indexOf(':') >= 0) {
       auth = auth.split(':');
       user = shift(auth);
-      if (!new RegExp(r'^\S+$').hasMatch(user)) {
+      if (!RegExp(r'^\S+$').hasMatch(user)) {
         return false;
       }
       auth.join(':');
-      if (!new RegExp(r'^\S*$').hasMatch(user)) {
+      if (!RegExp(r'^\S*$').hasMatch(user)) {
         return false;
       }
     }
@@ -103,9 +103,7 @@ bool isURL(String input, [Map options]) {
     } catch (e) {
       return false;
     }
-    if (!new RegExp(r'^[0-9]+$').hasMatch(port_str) ||
-        port <= 0 ||
-        port > 65535) {
+    if (!RegExp(r'^[0-9]+$').hasMatch(port_str) || port <= 0 || port > 65535) {
       return false;
     }
   }

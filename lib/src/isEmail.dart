@@ -1,7 +1,7 @@
 // Inspired from: https://github.com/manishsaraan/email-validator
 
 // https://regexr.com/2rhq7
-RegExp _email_regex = new RegExp(
+RegExp _email_regex = RegExp(
     r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
 
 /// Check if string [input] is an email
