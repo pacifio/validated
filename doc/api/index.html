@@ -54,8 +54,11 @@
   <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
       <section class="desc markdown">
         <h1 id="validated">Validated</h1>
-<p> The ultimate dart + flutter string validators . This library over 40 validators plus sanitizers . Check out the <a href="https://pub.dev/documentation/validated/latest/validated/validated-library.html">docs</a> for all functions . You will find all the functions under <code>validated</code> package</p>
+<p><a href="https://travis-ci.org/pacifio/validated"><img src="https://travis-ci.org/pacifio/validated.svg?branch=master" alt="Build Status"></a>
+ The ultimate dart + flutter string validators . This library 45 validators plus sanitizers . Check out the <a href="https://pub.dev/documentation/validated/latest/validated/validated-library.html">docs</a> for all functions . You will find all the functions under <code>validated</code> package</p>
 <h1 id="example">Example</h1>
+<h2 id="validators">Validators</h2>
+<p>Example of some validators .. go to <code>lib/src/</code> to get the full list of validators or check out the <a href="https://pub.dev/documentation/validated/latest/validated/validated-library.html">docs</a> for more info</p>
 <pre class="language-dart"><code class="language-dart">import 'package:validated/validated.dart' as validate;
 
 void main() {
@@ -64,13 +67,26 @@ void main() {
   print(validate.isAscii("ABCDEF")); // false
   print(validate.isSameType('String', false)); // false
   print(validate.isUpperCase("ADIB")); // true
-  print(validate.isCapital("Adib")); // true
+  print(validate.isCapitalized("Adib")); // true
   print(validate.contains("Dart is nice", "nice")); // true
   print(validate.isCurrency("\$")); // false
   print(validate.isURL('https://www.google.com')); // true
   print(validate.isEmoji("😀")); // true
   print(validate.isEmoji("some random text")); // false
 }
+</code></pre>
+<h2 id="sanitizers">Sanitizers</h2>
+<p>Example of some sanitizers</p>
+<blockquote>
+<p><a href="https://github.com/karan/validator.dart/blob/master/lib/src/sanitizer.dart">Credit</a></p></blockquote>
+<pre class="language-dart"><code class="language-dart">import 'package:validated/validated.dart' as validate;
+
+validate.toBoolean(str);
+validate.toDate(str);
+validate.toDouble(str);
+validate.toFloat(str);
+validate.toInt(str);
+validate.toString(input);
 </code></pre>
 <h1 id="credits">Credits</h1>
 <p>1 . <a href="https://github.com/validatorjs/validator.js">validator.js</a>
@@ -102,7 +118,7 @@ void main() {
 
 <footer>
   <span class="no-break">
-    validated 1.0.2
+    validated 1.0.3
   </span>
 
   

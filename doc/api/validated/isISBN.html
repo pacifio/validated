@@ -141,7 +141,7 @@
 
   version = version.toString();
 
-  String sanitized = input.replaceAll(new RegExp(r&#39;[\s-]+&#39;), &#39;&#39;);
+  String sanitized = input.replaceAll(RegExp(r&#39;[\s-]+&#39;), &#39;&#39;);
   int checksum = 0;
 
   if (version == &#39;10&#39;) {
@@ -181,7 +181,7 @@
 
 <footer>
   <span class="no-break">
-    validated 1.0.2
+    validated 1.0.3
   </span>
 
   

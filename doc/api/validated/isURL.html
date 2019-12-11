@@ -183,7 +183,7 @@
   split = input.split(&#39;#&#39;);
   input = shift(split);
   hash = split.join(&#39;#&#39;);
-  if (hash != null &amp;&amp; hash != &quot;&quot; &amp;&amp; new RegExp(r&#39;\s&#39;).hasMatch(hash)) {
+  if (hash != null &amp;&amp; hash != &quot;&quot; &amp;&amp; RegExp(r&#39;\s&#39;).hasMatch(hash)) {
     return false;
   }
 
@@ -191,7 +191,7 @@
   split = input.split(&#39;?&#39;);
   input = shift(split);
   query = split.join(&#39;?&#39;);
-  if (query != null &amp;&amp; query != &quot;&quot; &amp;&amp; new RegExp(r&#39;\s&#39;).hasMatch(query)) {
+  if (query != null &amp;&amp; query != &quot;&quot; &amp;&amp; RegExp(r&#39;\s&#39;).hasMatch(query)) {
     return false;
   }
 
@@ -199,7 +199,7 @@
   split = input.split(&#39;&#47;&#39;);
   input = shift(split);
   path = split.join(&#39;&#47;&#39;);
-  if (path != null &amp;&amp; path != &quot;&quot; &amp;&amp; new RegExp(r&#39;\s&#39;).hasMatch(path)) {
+  if (path != null &amp;&amp; path != &quot;&quot; &amp;&amp; RegExp(r&#39;\s&#39;).hasMatch(path)) {
     return false;
   }
 
@@ -210,11 +210,11 @@
     if (auth.indexOf(&#39;:&#39;) &gt;= 0) {
       auth = auth.split(&#39;:&#39;);
       user = shift(auth);
-      if (!new RegExp(r&#39;^\S+$&#39;).hasMatch(user)) {
+      if (!RegExp(r&#39;^\S+$&#39;).hasMatch(user)) {
         return false;
       }
       auth.join(&#39;:&#39;);
-      if (!new RegExp(r&#39;^\S*$&#39;).hasMatch(user)) {
+      if (!RegExp(r&#39;^\S*$&#39;).hasMatch(user)) {
         return false;
       }
     }
@@ -231,9 +231,7 @@
     } catch (e) {
       return false;
     }
-    if (!new RegExp(r&#39;^[0-9]+$&#39;).hasMatch(port_str) ||
-        port &lt;= 0 ||
-        port &gt; 65535) {
+    if (!RegExp(r&#39;^[0-9]+$&#39;).hasMatch(port_str) || port &lt;= 0 || port &gt; 65535) {
       return false;
     }
   }
@@ -265,7 +263,7 @@
 
 <footer>
   <span class="no-break">
-    validated 1.0.2
+    validated 1.0.3
   </span>
 
   

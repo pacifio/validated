@@ -135,7 +135,7 @@
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">bool isEmoji(String input) {
-  RegExp regExp = new RegExp(
+  RegExp regExp = RegExp(
       r&quot;(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])&quot;);
   return regExp.hasMatch(input);
 }</code></pre>
@@ -150,7 +150,7 @@
 
 <footer>
   <span class="no-break">
-    validated 1.0.2
+    validated 1.0.3
   </span>
 
   

@@ -141,7 +141,7 @@
   List parts = input.split(&#39;.&#39;);
   if (options[&#39;require_tld&#39;]) {
     var tld = parts.removeLast();
-    if (parts.length == 0 || !new RegExp(r&#39;^[a-z]{2,}$&#39;).hasMatch(tld)) {
+    if (parts.length == 0 || !RegExp(r&#39;^[a-z]{2,}$&#39;).hasMatch(tld)) {
       return false;
     }
   }
@@ -153,7 +153,7 @@
         return false;
       }
     }
-    if (!new RegExp(r&#39;^[a-z\\u00a1-\\uffff0-9-]+$&#39;).hasMatch(part)) {
+    if (!RegExp(r&#39;^[a-z\\u00a1-\\uffff0-9-]+$&#39;).hasMatch(part)) {
       return false;
     }
     if (part[0] == &#39;-&#39; ||
@@ -175,7 +175,7 @@
 
 <footer>
   <span class="no-break">
-    validated 1.0.2
+    validated 1.0.3
   </span>
 
   

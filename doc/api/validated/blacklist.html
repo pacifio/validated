@@ -137,7 +137,7 @@ some chars.</p>
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">String blacklist(String str, String chars) {
-  return str.replaceAll(new RegExp(&#39;[&#39; + chars + &#39;]+&#39;), &#39;&#39;);
+  return str.replaceAll(RegExp(&#39;[&#39; + chars + &#39;]+&#39;), &#39;&#39;);
 }</code></pre>
     </section>
 
@@ -150,7 +150,7 @@ some chars.</p>
 
 <footer>
   <span class="no-break">
-    validated 1.0.2
+    validated 1.0.3
   </span>
 
   
