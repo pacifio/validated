@@ -16,7 +16,7 @@ main() async {
     }
   }
 
-  new File('../validated.dart').writeAsString(chunk).whenComplete(() {
+  File('../validated.dart').writeAsString(chunk).whenComplete(() {
     print("Job done");
   });
 }

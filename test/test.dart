@@ -10,5 +10,6 @@ void main() {
     expect(validate.isCPF("12312312323"), false);
     expect(validate.isCNPJ("52330920000171"), true);
     expect(validate.isCNPJ("12312312312312"), false);
+    expect(validate.isEmoji("😀"), true);
   });
 }

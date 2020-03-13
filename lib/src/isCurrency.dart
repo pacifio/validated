@@ -67,7 +67,7 @@ RegExp _regexBuild({
     }
   }
 
-  return new RegExp('^(?!-? )(?=.*\\d)${pattern}\$');
+  return RegExp('^(?!-? )(?=.*\\d)${pattern}\$');
 }
 
 /// Check if string [input] is a currency

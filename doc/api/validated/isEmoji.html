@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the isNull function from the validated library, for the Dart programming language.">
-  <title>isNull function - validated library - Dart API</title>
+  <meta name="description" content="API docs for the isEmoji function from the validated library, for the Dart programming language.">
+  <title>isEmoji function - validated library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="..">
 
@@ -26,9 +26,9 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="index.html">validated</a></li>
     <li><a href="validated/validated-library.html">validated</a></li>
-    <li class="self-crumb">isNull function</li>
+    <li class="self-crumb">isEmoji function</li>
   </ol>
-  <div class="self-name">isNull</div>
+  <div class="self-name">isEmoji</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -46,7 +46,7 @@
     <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
       <li><a href="index.html">validated</a></li>
       <li><a href="validated/validated-library.html">validated</a></li>
-      <li class="self-crumb">isNull function</li>
+      <li class="self-crumb">isEmoji function</li>
     </ol>
     
     <h5>validated library</h5>
@@ -121,21 +121,23 @@
   </div><!--/.sidebar-offcanvas-left-->
 
   <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
-      <div><h1><span class="kind-function">isNull</span> function </h1></div>
+      <div><h1><span class="kind-function">isEmoji</span> function </h1></div>
 
     <section class="multi-line-signature">
         <span class="returntype">bool</span>
-                <span class="name ">isNull</span>
-(<wbr><span class="parameter" id="isNull-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
+                <span class="name ">isEmoji</span>
+(<wbr><span class="parameter" id="isEmoji-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
     </section>
     <section class="desc markdown">
-      <p>check if the string <code>input</code> is null</p>
+      <p>Takes an input (an emoji) for validation</p>
     </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">bool isNull(String input) {
-  return input == null || input.length == 0;
+      <pre class="language-dart"><code class="language-dart">bool isEmoji(String input) {
+  RegExp regExp = RegExp(
+      r&quot;(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])&quot;);
+  return regExp.hasMatch(input);
 }</code></pre>
     </section>
 

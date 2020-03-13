@@ -66,12 +66,13 @@
       <li><a href="validated/isBase64.html">isBase64</a></li>
       <li><a href="validated/isBoolean.html">isBoolean</a></li>
       <li><a href="validated/isByteLength.html">isByteLength</a></li>
-      <li><a href="validated/isCapital.html">isCapital</a></li>
+      <li><a href="validated/isCapitalized.html">isCapitalized</a></li>
       <li><a href="validated/isCreditCard.html">isCreditCard</a></li>
       <li><a href="validated/isCurrency.html">isCurrency</a></li>
       <li><a href="validated/isDataURI.html">isDataURI</a></li>
       <li><a href="validated/isDivisibleBy.html">isDivisibleBy</a></li>
       <li><a href="validated/isEmail.html">isEmail</a></li>
+      <li><a href="validated/isEmoji.html">isEmoji</a></li>
       <li><a href="validated/isFloat.html">isFloat</a></li>
       <li><a href="validated/isFQDN.html">isFQDN</a></li>
       <li><a href="validated/isFullWidth.html">isFullWidth</a></li>
@@ -136,7 +137,7 @@ some chars.</p>
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">String whitelist(String str, String chars) {
-  return str.replaceAll(new RegExp(&#39;[^&#39; + chars + &#39;]+&#39;), &#39;&#39;);
+  return str.replaceAll(RegExp(&#39;[^&#39; + chars + &#39;]+&#39;), &#39;&#39;);
 }</code></pre>
     </section>
 
@@ -149,7 +150,7 @@ some chars.</p>
 
 <footer>
   <span class="no-break">
-    validated 1.0.0
+    validated 1.0.3
   </span>
 
   

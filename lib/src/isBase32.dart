@@ -1,4 +1,4 @@
-RegExp _regExp = new RegExp(r"/^[A-Z2-7]+=*$/");
+RegExp _regExp = RegExp(r"/^[A-Z2-7]+=*$/");
 
 /// check if a string [input] is base32 encoded
 bool isBase32(String input) {

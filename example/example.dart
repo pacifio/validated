@@ -6,8 +6,9 @@ void main() {
   print(validate.isAscii("ABCDEF"));
   print(validate.isSameType('String', false));
   print(validate.isUpperCase("ADIB"));
-  print(validate.isCapital("Adib"));
+  print(validate.isCapitalized("Adib"));
   print(validate.contains("Dart is nice", "nice"));
   print(validate.isCurrency("\$"));
   print(validate.isURL('https://www.google.com'));
+  print(validate.isEmoji("😀"));
 }

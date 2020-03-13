@@ -1,4 +1,4 @@
-RegExp _regExp = new RegExp(r'[\uD800-\uDBFF][\uDC00-\uDFFF]');
+RegExp _regExp = RegExp(r'[\uD800-\uDBFF][\uDC00-\uDFFF]');
 
 /// check if the length of the string [input] falls in a range
 bool isLength(String input, int min, [int max]) {

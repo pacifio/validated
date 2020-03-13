@@ -1,4 +1,4 @@
-RegExp _regExp = new RegExp(r"/[^A-Z0-9+\/=]/i");
+RegExp _regExp = RegExp(r"/[^A-Z0-9+\/=]/i");
 
 /// check if a string [input] is base64 encoded
 bool isBase64(String input) {
