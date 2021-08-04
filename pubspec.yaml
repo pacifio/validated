@@ -1,5 +1,5 @@
 name: validated
-version: 1.0.3
+version: 2.0.0
 description: The ultimate string validator for dart and flutter with over 40+ validators
 homepage: https://github.com/pacifio/validated
 environment:
