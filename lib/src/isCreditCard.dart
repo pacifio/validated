@@ -7,8 +7,10 @@ bool isCreditCard(String input) {
   if (_regExp.hasMatch(sanitized)) {
     return false;
   }
-  var sum = 0;
-  var digit, tmpNum, shouldDouble;
+  int sum = 0;
+  String digit;
+  int tmpNum;
+  bool shouldDouble = true;
   for (var i = sanitized.length - 1; i >= 0; i--) {
     digit = sanitized.substring(i, (i + 1));
     tmpNum = int.parse(digit, radix: 10);
@@ -25,5 +27,5 @@ bool isCreditCard(String input) {
     shouldDouble = !shouldDouble;
   }
 
-  return !!((sum % 10) == 0 ? sanitized : false);
+  return !!((sum % 10) == 0);
 }

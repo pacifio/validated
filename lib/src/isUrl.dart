@@ -10,11 +10,8 @@ import './isFQDN.dart';
 /// `{ 'protocols': ['http','https','ftp'], 'require_tld': true,
 /// 'require_protocol': false, 'allow_underscores': false,
 /// 'host_whitelist': false, 'host_blacklist': false }`.
-bool isURL(String input, [Map options]) {
-  if (input == null ||
-      input.isEmpty ||
-      input.length > 2083 ||
-      input.indexOf('mailto:') == 0) {
+bool isURL(String input, [Map? options]) {
+  if (input.isEmpty || input.length > 2083 || input.indexOf('mailto:') == 0) {
     return false;
   }
 
@@ -25,7 +22,11 @@ bool isURL(String input, [Map options]) {
     'allow_underscores': false
   };
 
-  options = merge(options, default_url_options);
+  if (options == null) {
+    options = default_url_options;
+  } else {
+    options = merge(options, default_url_options);
+  }
 
   var protocol,
       user,

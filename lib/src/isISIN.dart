@@ -12,7 +12,9 @@ bool isISIN(String input) {
           .toString());
 
   var sum = 0;
-  var digit, tmpNum, shouldDouble = true;
+  String digit;
+  int tmpNum;
+  bool shouldDouble = true;
   for (var i = checksumStr.length - 2; i >= 0; i--) {
     digit = checksumStr.substring(i, (i + 1));
     tmpNum = int.parse(digit, radix: 10);

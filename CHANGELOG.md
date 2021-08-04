@@ -1,3 +1,6 @@
+## 2.0.0
+* Added null safety support
+
 ## 1.0.3
 
 * Fixed new keyword issue

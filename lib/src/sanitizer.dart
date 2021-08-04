@@ -14,7 +14,7 @@ String toString(input) {
 }
 
 /// convert the input to a date, or null if the input is not a date
-DateTime toDate(String str) {
+DateTime? toDate(String str) {
   try {
     return DateTime.parse(str);
   } catch (e) {
@@ -53,7 +53,7 @@ num toInt(String str, {int radix = 10}) {
 ///
 /// Everything except for '0', 'false' and ''
 /// returns `true`. In `strict` mode only '1' and 'true' return `true`.
-bool toBoolean(String str, [bool strict]) {
+bool toBoolean(String str, [bool strict = false]) {
   if (strict == true) {
     return str == '1' || str == 'true';
   }
@@ -61,20 +61,20 @@ bool toBoolean(String str, [bool strict]) {
 }
 
 /// trim characters (whitespace by default) from both sides of the input
-String trim(String str, [String chars]) {
+String trim(String str, [String? chars]) {
   RegExp pattern =
       (chars != null) ? RegExp('^[$chars]+|[$chars]+\$') : RegExp(r'^\s+|\s+$');
   return str.replaceAll(pattern, '');
 }
 
 /// trim characters from the left-side of the input
-String ltrim(String str, [String chars]) {
+String ltrim(String str, [String? chars]) {
   var pattern = chars != null ? RegExp('^[$chars]+') : RegExp(r'^\s+');
   return str.replaceAll(pattern, '');
 }
 
 /// trim characters from the right-side of the input
-String rtrim(String str, [String chars]) {
+String rtrim(String str, [String? chars]) {
   var pattern = chars != null ? RegExp('[$chars]+\$') : RegExp(r'\s+$');
   return str.replaceAll(pattern, '');
 }
@@ -99,7 +99,7 @@ String blacklist(String str, String chars) {
 ///
 /// If `keep_new_lines` is `true`, newline characters are preserved
 /// `(\n and \r, hex 0xA and 0xD)`.
-String stripLow(String str, [bool keep_new_lines]) {
+String stripLow(String str, [bool keep_new_lines = false]) {
   String chars = keep_new_lines == true
       ? '\x00-\x09\x0B\x0C\x0E-\x1F\x7F'
       : '\x00-\x1F\x7F';
@@ -127,8 +127,13 @@ String escape(String str) {
 /// GMail addresses have dots removed in the local part and are stripped of
 /// tags (e.g. `some.one+tag@gmail.com` becomes `someone@gmail.com`) and all
 /// `@googlemail.com` addresses are normalized to `@gmail.com`.
-String normalizeEmail(String email, [Map options]) {
-  options = merge(options, _default_normalize_email_options);
+String normalizeEmail(String email, [Map? options]) {
+  if (options == null) {
+    options = _default_normalize_email_options;
+  } else {
+    options = merge(options, _default_normalize_email_options);
+  }
+
   if (isEmail(email) == false) {
     return '';
   }
