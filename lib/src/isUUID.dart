@@ -15,6 +15,6 @@ var _uuid = {
 /// [version] expected values -> '3', '4', '5', 'all'
 /// by default 'all' is used
 bool isUUID(String input, [String version = 'all']) {
-  var pattern = _uuid[version];
+  RegExp pattern = _uuid[version]!;
   return pattern.hasMatch(input);
 }
