@@ -3,17 +3,17 @@ RegExp _regExp = RegExp(
 
 /// Check if string [input] is a credit card or not
 bool isCreditCard(String input) {
-  String sanitized = input.replaceAll(r"/[- ]+/g", '');
+  String sanitized = input.replaceAll(RegExp(r'[ -]*'), '');
   if (_regExp.hasMatch(sanitized)) {
     return false;
   }
   int sum = 0;
-  String digit;
-  int tmpNum;
-  bool shouldDouble = true;
+  int digit, tmpNum;
+  bool shouldDouble = false;
+
   for (var i = sanitized.length - 1; i >= 0; i--) {
-    digit = sanitized.substring(i, (i + 1));
-    tmpNum = int.parse(digit, radix: 10);
+    digit = int.parse(sanitized.substring(i, (i + 1)));
+    tmpNum = int.parse('$digit', radix: 10);
     if (shouldDouble) {
       tmpNum *= 2;
       if (tmpNum >= 10) {
@@ -27,5 +27,5 @@ bool isCreditCard(String input) {
     shouldDouble = !shouldDouble;
   }
 
-  return !!((sum % 10) == 0);
+  return !!((sum % 10) == 0 ? true : false);
 }
